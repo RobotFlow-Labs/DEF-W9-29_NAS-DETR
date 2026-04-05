@@ -1,0 +1,23 @@
+[model]
+variant = "A1"
+num_queries = 300
+decoder_layers = 6
+
+[data]
+image_size = [640, 640]
+num_classes = 10
+
+[loss]
+gamma = 2.0
+lambda_l1 = 5.0
+lambda_giou = 2.0
+lambda_cls = 1.0
+lambda_box = 2.5
+lambda_dn = 0.5
+denoise_sigma = 0.1
+
+[search]
+rounds = 20000
+population_size = 12
+entropy_weights = [0,0,1,1,2,4]
+flops_cap_g = 160.0

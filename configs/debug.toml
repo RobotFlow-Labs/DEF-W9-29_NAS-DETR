@@ -1,0 +1,14 @@
+[model]
+variant = "A1"
+num_queries = 100
+decoder_layers = 2
+
+[data]
+image_size = [256, 256]
+num_classes = 10
+
+[search]
+rounds = 20
+population_size = 4
+entropy_weights = [0,0,1,1,2,4]
+flops_cap_g = 50.0
